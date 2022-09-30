@@ -1,6 +1,7 @@
 import Dashboard from './components/Dashboard';
 import Search from './components/Search';
 import Sidebar from './components/Sidebar';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -8,7 +9,10 @@ function App() {
       <Sidebar />
       <div className='w-full'>
         <Search />
-        <Dashboard />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          {/* <Route path="cars" element={<Cars />} /> */}
+        </Routes>
       </div>
     </div>
   );
