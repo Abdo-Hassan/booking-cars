@@ -1,6 +1,6 @@
 import React from 'react';
 import Person from '../assets/person.png';
-import Notification from '../assets/notification.png';
+import Notification from '../assets/icons//notification.png';
 
 const Search = () => {
   return (
@@ -32,14 +32,12 @@ const Search = () => {
           <img
             src={Notification}
             alt='notification'
-            className='mr-8 cursor-pointer
-'
+            className='mr-8 cursor-pointer'
           />
           <img
             src={Person}
             alt='person'
-            className='rounded-full cursor-pointer
-'
+            className='rounded-full cursor-pointer'
           />
         </div>
       </div>
