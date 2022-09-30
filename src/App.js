@@ -1,7 +1,15 @@
+import Dashboard from './components/Dashboard';
+import Search from './components/Search';
+import Sidebar from './components/Sidebar';
+
 function App() {
   return (
-    <div className='App '>
-      <h1 className='text-3xl font-bold underline'>test</h1>
+    <div className='bg-primary-grey flex'>
+      <Sidebar />
+      <div className='m-6'>
+        <Search />
+        <Dashboard />
+      </div>
     </div>
   );
 }
