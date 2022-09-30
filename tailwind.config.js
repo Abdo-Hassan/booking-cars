@@ -19,6 +19,12 @@ module.exports = {
           four: '#70CF97',
           five: '#FF764C',
         },
+        lighten: {
+          one: '#A66FF0',
+          two: '#FF7E861A',
+          three: '#A162F71A',
+          four: '#F6CC0D1A',
+        },
       },
     },
   },
