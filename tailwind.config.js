@@ -24,7 +24,13 @@ module.exports = {
           two: '#FF7E861A',
           three: '#A162F71A',
           four: '#F6CC0D1A',
+          five: '#E1DFA4',
+          six: '#E3ECF1',
+          seven: '#F4E3E5',
         },
+      },
+      fontFamily: {
+        Raleway: ['DM Sans'],
       },
     },
   },
