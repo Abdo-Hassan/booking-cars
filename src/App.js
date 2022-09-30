@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='bg-primary-grey flex'>
       <Sidebar />
-      <div className='m-6 w-full'>
+      <div className='w-full'>
         <Search />
         <Dashboard />
       </div>
