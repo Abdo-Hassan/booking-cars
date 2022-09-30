@@ -3,10 +3,10 @@ import Chart1 from '../assets/cards/chart1.png';
 import Chart2 from '../assets/cards/chart2.png';
 import Chart3 from '../assets/cards/chart3.png';
 import Chart4 from '../assets/cards/chart4.png';
-import iconChart1 from '../assets/iconChart1.png';
-import iconChart2 from '../assets/iconChart2.png';
-import iconChart3 from '../assets/iconChart3.png';
-import iconChart4 from '../assets/iconChart4.png';
+import iconChart1 from '../assets//icons/iconChart1.png';
+import iconChart2 from '../assets//icons/iconChart2.png';
+import iconChart3 from '../assets//icons/iconChart3.png';
+import iconChart4 from '../assets//icons/iconChart4.png';
 
 const Charts = () => {
   return (
