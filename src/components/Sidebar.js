@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className='w-72 h-screen bg-white px-4 mr-0.5'>
+    <div className='w-72 h-screen sticky top-0 bg-white px-4 mr-0.5'>
       <div className='flex items-center px-3'>
         <img src={Logo} alt='logo' className='mr-3' />
         <h6 className='font-bold text-2xl py-4'>Motiv.</h6>

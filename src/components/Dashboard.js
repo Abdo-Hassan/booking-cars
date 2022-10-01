@@ -2,12 +2,19 @@ import React from 'react';
 
 import HomeCars from './CarsSection/HomeCars';
 import Charts from './Charts';
+import Trophies from './TrophiesSection/Trophies';
 
 const Dashboard = () => {
   return (
     <>
+      {/* charts section */}
       <Charts />
+
+      {/* Trophies section */}
+      <Trophies />
+
       <div className='container py-6 px-6'>
+        {/* cars section */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           <HomeCars
             percentage='64'

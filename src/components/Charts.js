@@ -10,7 +10,7 @@ import iconChart4 from '../assets//icons/iconChart4.png';
 
 const Charts = () => {
   return (
-    <div className='container py-6 px-6'>
+    <div className='container py-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         <div className='flex justify-center flex-col bg-primary-main rounded-2xl py-5 mx-5'>
           <img

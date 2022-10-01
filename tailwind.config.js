@@ -27,6 +27,11 @@ module.exports = {
           five: '#E1DFA4',
           six: '#E3ECF1',
           seven: '#F4E3E5',
+          eight: '#FFE0BA',
+          nine: '#0F2837',
+          ten: '#6E1946',
+          eleven: '#FAC39B',
+          twelve: '#FF9619',
         },
       },
       fontFamily: {

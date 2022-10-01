@@ -1,11 +1,45 @@
 import React from 'react';
+import Desk from '../../assets/cards/desk.png';
+import TrophyCard from './TrophyCard';
 
-const trophies = () => {
+const Trophies = () => {
   return (
-    <div>
-      <h6>trophies</h6>
+    <div className='grid grid-cols-4 sm:grid-cols-4 gap-4 px-6 py-6'>
+      <div className='col-span-2 bg-lighten-eight px-6 flex items-center justify-between rounded-lg'>
+        <div>
+          <h4 className='font-bold text-3xl mb-2'>Apply for a car loan !</h4>
+          <h6 className='text-md font-normal mb-6'>
+            This is a sample of a generated text
+          </h6>
+          <button className='bg-lighten-nine py-3 px-6 text-white rounded-md'>
+            Discover More
+          </button>
+        </div>
+
+        <div>
+          <img src={Desk} alt='desk' />
+        </div>
+      </div>
+      <div className='col-span-1'>
+        <TrophyCard
+          title='Badges'
+          text='Hooray! Way to go Mohammed!'
+          points={20}
+          color='bg-lighten-nine'
+          colorText='text-lighten-twelve'
+        />
+      </div>
+      <div className='col-span-1'>
+        <TrophyCard
+          title='Points'
+          text='Redeem and claim your rewards!'
+          points={1500}
+          color='bg-lighten-ten'
+          colorText='text-lighten-eleven'
+        />
+      </div>
     </div>
   );
 };
 
-export default trophies;
+export default Trophies;
