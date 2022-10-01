@@ -19,7 +19,7 @@ const Booking = () => {
     try {
       return await (
         await axios.get(
-          'https://run.mocky.io/v3/559748e8-6167-4447-8736-122b0744cc01'
+          'https://run.mocky.io/v3/4b017a55-2b9e-4438-ac04-9fe86844e935'
         )
       ).data;
     } catch (error) {

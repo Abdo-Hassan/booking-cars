@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Audi A3",
-    "image": "../assets/cards/cars/carList1.svg",
+    "image": "https://i.ibb.co/Fmsf7N5/carList1.png",
     "brand": "audi",
     "country": "asia",
     "rent": "400",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "name": "E-class sedan",
-    "image": "../assets/cards/cars/carList2.svg",
+    "image": "https://i.ibb.co/SBPhdj0/carList2.png",
     "brand": "mercedes",
     "country": "germany",
     "rent": "500",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Audi Q8",
-    "image": "../assets/cards/cars/carList3.svg",
+    "image": "https://i.ibb.co/vksLsHt/carList3.png",
     "brand": "audi",
     "country": "germany",
     "rent": "294",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Renault KWID",
-    "image": "../assets/cards/cars/carList4.svg",
+    "image": "https://i.ibb.co/BwnzSy2/carList4.png",
     "brand": "renault",
     "country": "france",
     "rent": "583",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "name": "Audi Q5",
-    "image": "../assets/cards/cars/carList5.svg",
+    "image": "https://i.ibb.co/QD5pJ0V/carList5.png",
     "brand": "audi",
     "country": "germany",
     "rent": "400",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "name": "Toyota corolla",
-    "image": "../assets/cards/cars/carList6.svg",
+    "image": "https://i.ibb.co/K697wdK/carList6.png",
     "brand": "toyota",
     "country": "japan",
     "rent": "742",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "name": "Audi a4",
-    "image": "../assets/cards/cars/carList7.svg",
+    "image": "https://i.ibb.co/rkvgNBr/carList7.png",
     "brand": "audi",
     "country": "germany",
     "rent": "700",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "name": "mercedes-Benz GLS SUV",
-    "image": "../assets/cards/cars/carList8.svg",
+    "image": "https://i.ibb.co/J3N91cr/carList8.png",
     "brand": "mercedes",
     "country": "germany",
     "rent": "213",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "name": "Audi Q10",
-    "image": "../assets/cards/cars/carList9.svg",
+    "image": "https://i.ibb.co/K79VD6Q/carList9.png",
     "brand": "audi",
     "country": "germany",
     "rent": "823",
