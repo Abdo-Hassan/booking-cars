@@ -29,7 +29,7 @@ const CarCard = ({ name, country, users, transmission, rent, image }) => {
       </div>
       <h6 className='text-md text-slate-500 font-normal'>{country}</h6>
 
-      <img className='mx-auto my-7' src={image} alt='carBrand' />
+      {/* <img className='mx-auto my-7' src={image} alt='carBrand' /> */}
 
       <div className='flex items-center justify-between'>
         <div className='flex items-center'>

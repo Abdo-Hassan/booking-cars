@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Audi A3",
+    "image": "../assets/cards/cars/carList1.svg",
+    "brand": "audi",
+    "country": "asia",
+    "rent": "400",
+    "users": "4",
+    "transmission": "manual"
+  },
+  {
+    "id": 2,
+    "name": "E-class sedan",
+    "image": "../assets/cards/cars/carList2.svg",
+    "brand": "mercedes",
+    "country": "germany",
+    "rent": "500",
+    "users": "7",
+    "transmission": "auto"
+  },
+  {
+    "id": 3,
+    "name": "Audi Q8",
+    "image": "../assets/cards/cars/carList3.svg",
+    "brand": "audi",
+    "country": "germany",
+    "rent": "294",
+    "users": "8",
+    "transmission": "manual"
+  },
+  {
+    "id": 4,
+    "name": "Renault KWID",
+    "image": "../assets/cards/cars/carList4.svg",
+    "brand": "renault",
+    "country": "france",
+    "rent": "583",
+    "users": "9",
+    "transmission": "auto"
+  },
+  {
+    "id": 5,
+    "name": "Audi Q5",
+    "image": "../assets/cards/cars/carList5.svg",
+    "brand": "audi",
+    "country": "germany",
+    "rent": "400",
+    "users": "4",
+    "transmission": "manual"
+  },
+  {
+    "id": 6,
+    "name": "Toyota corolla",
+    "image": "../assets/cards/cars/carList6.svg",
+    "brand": "toyota",
+    "country": "japan",
+    "rent": "742",
+    "users": "4",
+    "transmission": "auto"
+  },
+  {
+    "id": 7,
+    "name": "Audi a4",
+    "image": "../assets/cards/cars/carList7.svg",
+    "brand": "audi",
+    "country": "germany",
+    "rent": "700",
+    "users": "9",
+    "transmission": "auto"
+  },
+  {
+    "id": 8,
+    "name": "mercedes-Benz GLS SUV",
+    "image": "../assets/cards/cars/carList8.svg",
+    "brand": "mercedes",
+    "country": "germany",
+    "rent": "213",
+    "users": "10",
+    "transmission": "auto"
+  },
+  {
+    "id": 9,
+    "name": "Audi Q10",
+    "image": "../assets/cards/cars/carList9.svg",
+    "brand": "audi",
+    "country": "germany",
+    "rent": "823",
+    "users": "5",
+    "transmission": "manual"
+  }
+]

@@ -18,7 +18,9 @@ const Booking = () => {
   const fetchCars = async () => {
     try {
       return await (
-        await axios.get('http://localhost:8000/cars')
+        await axios.get(
+          'https://run.mocky.io/v3/559748e8-6167-4447-8736-122b0744cc01'
+        )
       ).data;
     } catch (error) {
       console.log('~ error', error);
