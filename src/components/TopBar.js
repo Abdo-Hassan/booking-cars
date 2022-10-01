@@ -8,15 +8,12 @@ const TopBar = ({ language, toggleLanguage }) => {
   return (
     // <div className='bg-white sticky top-0 py-4 px-6'>
     <div className='bg-white  py-4 px-6'>
-      <div className='relative flex justify-between'>
+      <div className='relative block sm:flex justify-between'>
         <Search type='TopBar' placeholder='Search or type' />
 
         <div className='flex items-center'>
           {/* switch language */}
-          <LanguageSelect
-            defaultOption={language}
-            toggleLanguage={toggleLanguage}
-          />
+          <LanguageSelect language={language} toggleLanguage={toggleLanguage} />
 
           <img
             src={Notification}

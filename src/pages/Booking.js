@@ -3,7 +3,8 @@ import CarCard from '../components/CarsSection/CarCard';
 import DropDown from '../components/DropDown';
 import axios from 'axios';
 import DashboardIcon from '../assets/icons/sidebar-dashboard.svg';
-import FilterIcon from '../assets/icons/filter.svg';
+import FilterShowIcon from '../assets/icons/filterShow.svg';
+import FilterHiddenIcon from '../assets/icons/filterHidden.svg';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../components/Loading';
 import Search from '../components/Search';
@@ -14,6 +15,7 @@ let types = ['regular', 'coupe'];
 
 const Booking = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [showFilters, setShowFilters] = useState(true);
 
   const handleSearch = (val) => {
     setSearchValue(val);
@@ -53,7 +55,7 @@ const Booking = () => {
 
   return (
     <div className='p-8'>
-      <h6 className='text-3xl mb-10'>Booking</h6>
+      <h6 className='text-3xl mb-4 sm:mb-6'>Booking</h6>
 
       {carsLoading ? (
         <Loading />
@@ -61,23 +63,30 @@ const Booking = () => {
         <>
           {/* filter card */}
           <div className='block sm:flex items-center'>
-            <div className='relative mb-4'>
-              <DropDown type='carsType' defaultOption='Coupe' data={types} />
-              <DropDown
-                type='carsTransmission'
-                defaultOption='Manual'
-                data={transmission}
-              />
-              <DropDown type='carsBrand' defaultOption='Audi' data={brands} />
-            </div>
-            <div className='relative mb-4'>
-              <Search
-                type='cars'
-                placeholder='Search for a car'
-                handleSearch={handleSearch}
-                searchValue={searchValue}
-              />
-            </div>
+            {/* filters */}
+            {showFilters && (
+              <div className='relative mb-4 sm:mb-0'>
+                <DropDown type='carsType' defaultOption='Coupe' data={types} />
+                <DropDown
+                  type='carsTransmission'
+                  defaultOption='Manual'
+                  data={transmission}
+                />
+                <DropDown type='carsBrand' defaultOption='Audi' data={brands} />
+              </div>
+            )}
+
+            {/* search */}
+            {showFilters && (
+              <div className='relative mb-4 sm:mb-0'>
+                <Search
+                  type='cars'
+                  placeholder='Search for a car'
+                  handleSearch={handleSearch}
+                  searchValue={searchValue}
+                />
+              </div>
+            )}
 
             <div className='flex items-center ltr:ml-auto rtl:mr-auto'>
               <img
@@ -85,11 +94,21 @@ const Booking = () => {
                 src={DashboardIcon}
                 alt='DashboardIcon'
               />
-              <img
-                className='cursor-pointer'
-                src={FilterIcon}
-                alt='FilterIcon'
-              />
+              {showFilters ? (
+                <img
+                  onClick={() => setShowFilters(!showFilters)}
+                  className='cursor-pointer'
+                  src={FilterShowIcon}
+                  alt='FilterIcon'
+                />
+              ) : (
+                <img
+                  onClick={() => setShowFilters(!showFilters)}
+                  className='cursor-pointer bg-white p-2.5 rounded-full'
+                  src={FilterHiddenIcon}
+                  alt='FilterIcon'
+                />
+              )}
             </div>
           </div>
 

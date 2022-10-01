@@ -17,7 +17,7 @@ const LanguageSelect = ({ language, toggleLanguage }) => {
           <img src={ChevronDown} alt='ChevronDown' />
         </button>
         {open && (
-          <div className='absolute right-0 z-10 w-56 mt-4 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg'>
+          <div className='absolute -right-40 sm:right-0 z-10 w-56 mt-4 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg'>
             <div className='p-2'>
               <span
                 onClick={() => {
