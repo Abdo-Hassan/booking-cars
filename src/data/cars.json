@@ -4,17 +4,17 @@
     "name": "Audi A3",
     "image": "https://i.ibb.co/Fmsf7N5/carList1.png",
     "brand": "audi",
-    "country": "asia",
+    "type": "regular",
     "rent": "400",
     "users": "4",
     "transmission": "manual"
   },
   {
     "id": 2,
-    "name": "E-class sedan",
+    "name": "E-type sedan",
     "image": "https://i.ibb.co/SBPhdj0/carList2.png",
     "brand": "mercedes",
-    "country": "germany",
+    "type": "coupe",
     "rent": "500",
     "users": "7",
     "transmission": "auto"
@@ -24,7 +24,7 @@
     "name": "Audi Q8",
     "image": "https://i.ibb.co/vksLsHt/carList3.png",
     "brand": "audi",
-    "country": "germany",
+    "type": "coupe",
     "rent": "294",
     "users": "8",
     "transmission": "manual"
@@ -34,17 +34,17 @@
     "name": "Renault KWID",
     "image": "https://i.ibb.co/BwnzSy2/carList4.png",
     "brand": "renault",
-    "country": "france",
+    "type": "regular",
     "rent": "583",
     "users": "9",
     "transmission": "auto"
   },
   {
     "id": 5,
-    "name": "Audi Q5",
+    "name": "Renault mini",
     "image": "https://i.ibb.co/QD5pJ0V/carList5.png",
-    "brand": "audi",
-    "country": "germany",
+    "brand": "renault",
+    "type": "regular",
     "rent": "400",
     "users": "4",
     "transmission": "manual"
@@ -54,7 +54,7 @@
     "name": "Toyota corolla",
     "image": "https://i.ibb.co/K697wdK/carList6.png",
     "brand": "toyota",
-    "country": "japan",
+    "type": "regular",
     "rent": "742",
     "users": "4",
     "transmission": "auto"
@@ -64,7 +64,7 @@
     "name": "Audi a4",
     "image": "https://i.ibb.co/rkvgNBr/carList7.png",
     "brand": "audi",
-    "country": "germany",
+    "type": "coupe",
     "rent": "700",
     "users": "9",
     "transmission": "auto"
@@ -74,7 +74,7 @@
     "name": "mercedes-Benz GLS SUV",
     "image": "https://i.ibb.co/J3N91cr/carList8.png",
     "brand": "mercedes",
-    "country": "germany",
+    "type": "coupe",
     "rent": "213",
     "users": "10",
     "transmission": "auto"
@@ -84,7 +84,7 @@
     "name": "Audi Q10",
     "image": "https://i.ibb.co/K79VD6Q/carList9.png",
     "brand": "audi",
-    "country": "germany",
+    "type": "regular",
     "rent": "823",
     "users": "5",
     "transmission": "manual"

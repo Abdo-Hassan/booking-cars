@@ -13,7 +13,10 @@ const TopBar = ({ language, toggleLanguage }) => {
 
         <div className='flex items-center'>
           {/* switch language */}
-          <LanguageSelect language={language} toggleLanguage={toggleLanguage} />
+          <LanguageSelect
+            defaultOption={language}
+            toggleLanguage={toggleLanguage}
+          />
 
           <img
             src={Notification}

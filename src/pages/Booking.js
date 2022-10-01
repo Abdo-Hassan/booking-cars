@@ -8,6 +8,10 @@ import { useQuery } from '@tanstack/react-query';
 import Loading from '../components/Loading';
 import Search from '../components/Search';
 
+let brands = ['mercedes', 'audi', 'toyota', 'renault'];
+let transmission = ['auto', 'manual'];
+let types = ['regular', 'coupe'];
+
 const Booking = () => {
   const [searchValue, setSearchValue] = useState('');
 
@@ -19,7 +23,7 @@ const Booking = () => {
     try {
       return await (
         await axios.get(
-          'https://run.mocky.io/v3/4b017a55-2b9e-4438-ac04-9fe86844e935'
+          'https://run.mocky.io/v3/e91bf721-2d44-444a-8aec-1f05b676e2c0'
         )
       ).data;
     } catch (error) {
@@ -27,9 +31,13 @@ const Booking = () => {
     }
   };
 
-  const { data: cars, isLoading } = useQuery(['fetchCars'], fetchCars, {
-    refetchOnWindowFocus: false,
-  });
+  const { data: cars, isLoading: carsLoading } = useQuery(
+    ['fetchCars'],
+    fetchCars,
+    {
+      refetchOnWindowFocus: false,
+    }
+  );
 
   let filteredCars =
     cars &&
@@ -38,7 +46,8 @@ const Booking = () => {
       return (
         car?.name?.toLowerCase().includes(searchValue.toLowerCase()) ||
         car?.brand?.toLowerCase().includes(searchValue.toLowerCase()) ||
-        car?.country?.toLowerCase().includes(searchValue.toLowerCase())
+        car?.type?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        car?.rent?.toLowerCase().includes(searchValue.toLowerCase())
       );
     });
 
@@ -46,56 +55,68 @@ const Booking = () => {
     <div className='p-8'>
       <h6 className='text-3xl mb-10'>Booking</h6>
 
-      {/* filter card */}
-      <div className='flex items-center'>
-        <div>
-          <DropDown title='New' />
-          <DropDown title='Toyota' />
-        </div>
-        <div className='relative'>
-          <Search
-            type='cars'
-            placeholder='Search for a car'
-            handleSearch={handleSearch}
-            searchValue={searchValue}
-          />
-        </div>
-
-        <div className='flex items-center ltr:ml-auto rtl:mr-auto'>
-          <img
-            className='bg-white cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3'
-            src={DashboardIcon}
-            alt='DashboardIcon'
-          />
-          <img className='cursor-pointer' src={FilterIcon} alt='FilterIcon' />
-        </div>
-      </div>
-
-      {/* list of cars */}
-      {isLoading ? (
+      {carsLoading ? (
         <Loading />
       ) : (
-        <div className='container py-6'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {filteredCars && filteredCars?.length > 0 ? (
-              filteredCars?.map((car, i) => (
-                <CarCard
-                  key={i}
-                  name={car?.name}
-                  country={car?.country}
-                  users={car?.users}
-                  rent={car?.rent}
-                  image={car?.image}
-                  transmission={car?.transmission}
-                />
-              ))
-            ) : (
-              <div className='bg-white'>
-                <span>No cars to display</span>
-              </div>
-            )}
+        <>
+          {/* filter card */}
+          <div className='block sm:flex items-center'>
+            <div className='relative mb-4'>
+              <DropDown type='carsType' defaultOption='Coupe' data={types} />
+              <DropDown
+                type='carsTransmission'
+                defaultOption='Manual'
+                data={transmission}
+              />
+              <DropDown type='carsBrand' defaultOption='Audi' data={brands} />
+            </div>
+            <div className='relative mb-4'>
+              <Search
+                type='cars'
+                placeholder='Search for a car'
+                handleSearch={handleSearch}
+                searchValue={searchValue}
+              />
+            </div>
+
+            <div className='flex items-center ltr:ml-auto rtl:mr-auto'>
+              <img
+                className='bg-white cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3'
+                src={DashboardIcon}
+                alt='DashboardIcon'
+              />
+              <img
+                className='cursor-pointer'
+                src={FilterIcon}
+                alt='FilterIcon'
+              />
+            </div>
           </div>
-        </div>
+
+          {/* list of cars */}
+
+          <div className='container py-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {filteredCars && filteredCars?.length > 0 ? (
+                filteredCars?.map((car, i) => (
+                  <CarCard
+                    key={i}
+                    name={car?.name}
+                    type={car?.type}
+                    users={car?.users}
+                    rent={car?.rent}
+                    image={car?.image}
+                    transmission={car?.transmission}
+                  />
+                ))
+              ) : (
+                <h6 className='text-xl mt-6 absolute left-1/2'>
+                  No cars to display
+                </h6>
+              )}
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

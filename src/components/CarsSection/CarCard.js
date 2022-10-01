@@ -4,7 +4,7 @@ import Favorite from '../../assets/icons/favorite.svg';
 import FavoriteDone from '../../assets/icons/favorite-done.svg';
 import CarIcon2 from '../../assets/icons/carIcon2.svg';
 
-const CarCard = ({ name, country, users, transmission, rent, image }) => {
+const CarCard = ({ name, type, users, transmission, rent, image }) => {
   const [favorite, setFavorite] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ const CarCard = ({ name, country, users, transmission, rent, image }) => {
           />
         )}
       </div>
-      <h6 className='text-md text-slate-500 font-normal'>{country}</h6>
+      <h6 className='text-md text-slate-500 font-normal'>{type}</h6>
 
       <img className='mx-auto my-7' src={image} alt='carBrand' />
 

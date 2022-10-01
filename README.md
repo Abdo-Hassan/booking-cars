@@ -15,7 +15,7 @@ https://booking-car.netlify.app
 - Dashboard screen contents of cars statistics
 - Multilingual English and Arabic directions
 - Search and filter into different cars list
-- API Mocking for the car list
+- API Mocking for the car list [https://designer.mocky.io/]
 
 ## Run Locally
 
