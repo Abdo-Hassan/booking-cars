@@ -29,7 +29,7 @@ const Trophies = () => {
           colorText='text-lighten-twelve'
         />
       </div>
-      <div className='col-span-1'>
+      <div className='col-span-1 '>
         <TrophyCard
           title='Points'
           text='Redeem and claim your rewards!'

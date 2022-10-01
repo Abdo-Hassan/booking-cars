@@ -13,7 +13,7 @@ const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
       {/* car recommend */}
       <div className='flex items-center mb-4'>
         <img src={CarIcon1} alt='CarIcon1' className='mr-3' />
-        <span className='text-xl font-bold'>{percentage}% Recommend</span>
+        <span className='text-lg font-bold'>{percentage}% Recommend</span>
       </div>
 
       <img src={number === 1 ? Car1 : number === 2 ? Car2 : Car3} alt='Car1' />

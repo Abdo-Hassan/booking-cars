@@ -10,7 +10,7 @@ const CarCard = ({ title, country, users, transmission, rent }) => {
   return (
     <div className='bg-white rounded-2xl px-6 py-8'>
       <div className='flex items-center justify-between'>
-        <h5 className='text-2xl font-bold'>{title}</h5>
+        <h5 className='text-lg font-bold'>{title}</h5>
         {favorite ? (
           <img
             className='cursor-pointer'
@@ -27,14 +27,14 @@ const CarCard = ({ title, country, users, transmission, rent }) => {
           />
         )}
       </div>
-      <h6 className='text-xl text-slate-500 font-normal'>{country}</h6>
+      <h6 className='text-md text-slate-500 font-normal'>{country}</h6>
 
       <img className='mx-auto my-7' src={Car1} alt='carBrand' />
 
       <div className='flex items-center justify-between'>
         <div className='flex items-center'>
           <img src={Person} alt='users' className='mr-1' />
-          <span className='text-slate-500 text-xl font-normal mr-4'>
+          <span className='text-slate-500 text-lg font-normal mr-4'>
             {users}
           </span>
           <img src={CarIcon2} alt='transmission' className='mr-2' />
@@ -44,8 +44,8 @@ const CarCard = ({ title, country, users, transmission, rent }) => {
         </div>
 
         <div>
-          <span className='text-xl'>${rent}</span>
-          <span className='text-xl text-slate-500'>/d</span>
+          <span className='text-lg'>${rent}</span>
+          <span className='text-lg text-slate-500'>/d</span>
         </div>
       </div>
     </div>

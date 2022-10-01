@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className='w-72 h-screen sticky top-0 bg-white px-4 mr-0.5'>
+    <div className='hidden sm:block w-72 h-screen sticky top-0 bg-white px-4 mr-0.5'>
       <div className='flex items-center px-3'>
         <img src={Logo} alt='logo' className='mr-3' />
         <h6 className='font-bold text-2xl py-4'>Motiv.</h6>
@@ -19,7 +19,7 @@ const Sidebar = () => {
           <li className='relative'>
             <Link
               to='/'
-              className='flex items-center text-sm py-4 px-3 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+              className='flex items-center text-sm py-4 px-3 h-10 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
               href='#!'
               data-mdb-ripple='true'
               data-mdb-ripple-color='dark'>
@@ -31,7 +31,7 @@ const Sidebar = () => {
           <li className='relative'>
             <Link
               to='/cars'
-              className='flex items-center text-sm py-4 px-3 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+              className='flex items-center text-sm py-4 px-3 h-10 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
               href='#!'
               data-mdb-ripple='true'
               data-mdb-ripple-color='dark'>
@@ -44,7 +44,7 @@ const Sidebar = () => {
         <div className='mt-auto'>
           <li className='relative'>
             <a
-              className='flex items-center text-sm py-4 px-3 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+              className='flex items-center text-sm py-4 px-3 h-10 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
               href='#!'
               data-mdb-ripple='true'
               data-mdb-ripple-color='dark'>
@@ -54,7 +54,7 @@ const Sidebar = () => {
           </li>
           <li className='relative'>
             <a
-              className='flex items-center text-sm py-4 px-3 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+              className='flex items-center text-sm py-4 px-3 h-10 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
               href='#!'
               data-mdb-ripple='true'
               data-mdb-ripple-color='dark'>
