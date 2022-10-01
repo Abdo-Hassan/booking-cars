@@ -9,7 +9,7 @@ const DropDown = ({ title }) => {
         data-dropdown-toggle='dropdown'
         className='text-slate-500 bg-white hover:bg-slate-50 focus:outline-none font-medium rounded-2xl text-sm mr-3 px-7 py-1.5 text-center inline-flex items-center'
         type='button'>
-        <span className='mr-3 text-lg'>{title}</span>
+        <span className='ltr:mr-3 rtl:ml-3 text-lg'>{title}</span>
         <img src={ChevronDown} alt='ChevronDown' />
       </button>
       <div
@@ -28,9 +28,7 @@ const DropDown = ({ title }) => {
           className='py-1 text-sm text-gray-700 dark:text-gray-200'
           aria-labelledby='dropdownDefault'>
           <li>
-            <a
-              href='#'
-              className='block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'>
+            <a className='block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'>
               Dashboard
             </a>
           </li>

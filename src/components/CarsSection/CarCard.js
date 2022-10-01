@@ -33,12 +33,16 @@ const CarCard = ({ title, country, users, transmission, rent }) => {
 
       <div className='flex items-center justify-between'>
         <div className='flex items-center'>
-          <img src={Person} alt='users' className='mr-1' />
-          <span className='text-slate-500 text-lg font-normal mr-4'>
+          <img src={Person} alt='users' className='ltr:mr-1 rtl:ml-1' />
+          <span className='text-slate-500 text-lg font-normal ltr:mr-4 rtl:ml-4'>
             {users}
           </span>
-          <img src={CarIcon2} alt='transmission' className='mr-2' />
-          <span className='text-md text-slate-500 font-normal mr-2'>
+          <img
+            src={CarIcon2}
+            alt='transmission'
+            className='ltr:mr-2 rtl:ml-2'
+          />
+          <span className='text-md text-slate-500 font-normal ltr:mr-2 rtl:ml-2'>
             {transmission}
           </span>
         </div>

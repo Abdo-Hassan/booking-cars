@@ -1,15 +1,24 @@
 import Dashboard from './pages/Dashboard';
-import Search from './components/Search';
+import TopBar from './components/TopBar';
 import Sidebar from './components/Sidebar';
 import { Routes, Route } from 'react-router-dom';
 import Booking from './pages/Booking';
+import { useState } from 'react';
 
 function App() {
+  const [language, setLanguage] = useState('English');
+
+  const toggleLanguage = (lang) => {
+    setLanguage(lang);
+  };
+
   return (
-    <div className='bg-primary-grey flex'>
+    <div
+      className='bg-primary-grey flex'
+      dir={language === 'English' ? 'ltr' : 'rtl'}>
       <Sidebar />
       <div className='w-full'>
-        <Search />
+        <TopBar language={language} toggleLanguage={toggleLanguage} />
         <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='cars' element={<Booking />} />

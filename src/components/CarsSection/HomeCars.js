@@ -12,7 +12,7 @@ const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
     <div className={`rounded-2xl p-6 ${color} flex flex-col`}>
       {/* car recommend */}
       <div className='flex items-center mb-4'>
-        <img src={CarIcon1} alt='CarIcon1' className='mr-3' />
+        <img src={CarIcon1} alt='CarIcon1' className='ltr:mr-3 rtl:ml-3' />
         <span className='text-lg font-bold'>{percentage}% Recommend</span>
       </div>
 
@@ -23,11 +23,15 @@ const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
         <span className='text-xl font-bold '>{name}</span>
       </div>
       <div className='flex items-center '>
-        <img src={CarIcon2} alt='CarIcon2' className='mr-3' />
-        <span className='text-sm text-slate-500 mr-3'>{retweets}</span>
-        <img src={CarIcon3} alt='CarIcon3' className='mr-3' />
-        <img src={CarIcon4} alt='CarIcon4' className='mr-3' />
-        <span className='text-sm ml-auto text-slate-500'>${price}</span>
+        <img src={CarIcon2} alt='CarIcon2' className='ltr:mr-3 rtl:ml-3' />
+        <span className='text-sm text-slate-500 ltr:mr-3 rtl:ml-3'>
+          {retweets}
+        </span>
+        <img src={CarIcon3} alt='CarIcon3' className='ltr:mr-3 rtl:ml-3' />
+        <img src={CarIcon4} alt='CarIcon4' className='ltr:mr-3 rtl:ml-3' />
+        <span className='text-sm ltr:ml-auto rtl:mr-auto text-slate-500'>
+          ${price}
+        </span>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import DropDown from '../components/DropDown';
 const Booking = () => {
   return (
     <div className='p-8'>
-      <h6 className='text-3xl mb-8'>Booking</h6>
+      <h6 className='text-3xl mb-10'>Booking</h6>
 
       {/* filter card */}
       <DropDown title='New' />

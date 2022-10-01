@@ -12,9 +12,10 @@ https://booking-car.netlify.app
 ## Features
 
 - Fully responsive with all browser's screens
-- Mock an API for the car list
-- Search and filter into different cars list
 - Dashboard screen contents of cars statistics
+- Multilingual English and Arabic directions
+- Search and filter into different cars list
+- Mock an API for the car list
 
 ## Run Locally
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import Person from '../assets/person.svg';
 import Notification from '../assets/icons/notification.svg';
+import ChevronDown from '../assets/icons/chevronDown.svg';
+import LanguageSelect from './LanguageSelect';
 
-const Search = () => {
+const TopBar = ({ language, toggleLanguage }) => {
   return (
     <div className='bg-white sticky top-0 py-4 px-6'>
       <div className='relative flex justify-between'>
@@ -25,14 +27,18 @@ const Search = () => {
           type='search'
           id='search'
           className='border-none block p-4 pl-10 w-96 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-          placeholder='Search or type'
+          placeholder='TopBar or type'
           required=''
         />
+
         <div className='flex items-center'>
+          {/* switch language */}
+          <LanguageSelect language={language} toggleLanguage={toggleLanguage} />
+
           <img
             src={Notification}
             alt='notification'
-            className='mr-8 cursor-pointer'
+            className='m-3 cursor-pointer'
           />
           <img
             src={Person}
@@ -45,4 +51,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default TopBar;
