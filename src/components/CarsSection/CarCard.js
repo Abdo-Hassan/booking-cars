@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Car1 from '../../assets/cards/car1.png';
 import Person from '../../assets/icons/person.svg';
 import Favorite from '../../assets/icons/favorite.svg';
 import FavoriteDone from '../../assets/icons/favorite-done.svg';
 import CarIcon2 from '../../assets/icons/carIcon2.svg';
 
-const CarCard = ({ name, country, users, transmission, rent }) => {
+const CarCard = ({ name, country, users, transmission, rent, image }) => {
   const [favorite, setFavorite] = useState(false);
+
   return (
     <div className='bg-white rounded-2xl px-6 py-8'>
       <div className='flex items-center justify-between'>
@@ -29,7 +29,7 @@ const CarCard = ({ name, country, users, transmission, rent }) => {
       </div>
       <h6 className='text-md text-slate-500 font-normal'>{country}</h6>
 
-      <img className='mx-auto my-7' src={Car1} alt='carBrand' />
+      <img className='mx-auto my-7' src={image} alt='carBrand' />
 
       <div className='flex items-center justify-between'>
         <div className='flex items-center'>

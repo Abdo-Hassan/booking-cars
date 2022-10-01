@@ -3,9 +3,9 @@ import CarIcon1 from '../../assets/icons/carIcon1.svg';
 import CarIcon2 from '../../assets/icons/carIcon2.svg';
 import CarIcon3 from '../../assets/icons/carIcon3.svg';
 import CarIcon4 from '../../assets/icons/carIcon4.svg';
-import Car1 from '../../assets/cards/car1.png';
-import Car2 from '../../assets/cards/car2.png';
-import Car3 from '../../assets/cards/car3.png';
+import Car1 from '../../assets/cards/cars/car1.png';
+import Car2 from '../../assets/cards/cars/car2.png';
+import Car3 from '../../assets/cards/cars/car3.png';
 
 const FeaturedCars = ({ percentage, name, number, price, retweets, color }) => {
   return (

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import CarCard from '../components/CarsSection/CarCard';
 import DropDown from '../components/DropDown';
 import axios from 'axios';
+import DashboardIcon from '../assets/icons/sidebar-dashboard.svg';
+import FilterIcon from '../assets/icons/filter.svg';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../components/Loading';
 import Search from '../components/Search';
@@ -56,6 +58,15 @@ const Booking = () => {
             searchValue={searchValue}
           />
         </div>
+
+        <div className='flex items-center ltr:ml-auto rtl:mr-auto'>
+          <img
+            className='bg-white cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3'
+            src={DashboardIcon}
+            alt='DashboardIcon'
+          />
+          <img className='cursor-pointer' src={FilterIcon} alt='FilterIcon' />
+        </div>
       </div>
 
       {/* list of cars */}
@@ -64,16 +75,23 @@ const Booking = () => {
       ) : (
         <div className='container py-6'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {filteredCars?.map((car, i) => (
-              <CarCard
-                key={i}
-                name={car?.name}
-                country={car?.country}
-                users={car?.users}
-                rent={car?.rent}
-                transmission={car?.transmission}
-              />
-            ))}
+            {filteredCars && filteredCars?.length > 0 ? (
+              filteredCars?.map((car, i) => (
+                <CarCard
+                  key={i}
+                  name={car?.name}
+                  country={car?.country}
+                  users={car?.users}
+                  rent={car?.rent}
+                  image={car?.image}
+                  transmission={car?.transmission}
+                />
+              ))
+            ) : (
+              <div className='bg-white'>
+                <span>No cars to display</span>
+              </div>
+            )}
           </div>
         </div>
       )}

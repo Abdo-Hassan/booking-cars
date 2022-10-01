@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Audi A3",
+      "image": "https://im.ge/i/1RyXKJ",
       "brand": "audi",
       "country": "asia",
       "rent": "400",
@@ -12,6 +13,7 @@
     {
       "id": 2,
       "name": "E-class sedan",
+      "image": "https://im.ge/i/1Ryo6a",
       "brand": "mercedes",
       "country": "germany",
       "rent": "500",
@@ -21,64 +23,11 @@
     {
       "id": 3,
       "name": "Audi Q8",
+      "image": "https://im.ge/i/1RyT2x",
       "brand": "audi",
       "country": "germany",
       "rent": "294",
       "users": "8",
-      "transmission": "manual"
-    },
-    {
-      "id": 4,
-      "name": "Renault KWID",
-      "brand": "renault",
-      "country": "france",
-      "rent": "583",
-      "users": "9",
-      "transmission": "auto"
-    },
-    {
-      "id": 5,
-      "name": "Audi Q5",
-      "brand": "audi",
-      "country": "germany",
-      "rent": "400",
-      "users": "4",
-      "transmission": "manual"
-    },
-    {
-      "id": 6,
-      "name": "Toyota corolla",
-      "brand": "toyota",
-      "country": "japan",
-      "rent": "742",
-      "users": "4",
-      "transmission": "auto"
-    },
-    {
-      "id": 7,
-      "name": "Audi a4",
-      "brand": "audi",
-      "country": "germany",
-      "rent": "700",
-      "users": "9",
-      "transmission": "auto"
-    },
-    {
-      "id": 8,
-      "name": "mercedes-Benz GLS SUV",
-      "brand": "mercedes",
-      "country": "germany",
-      "rent": "213",
-      "users": "10",
-      "transmission": "auto"
-    },
-    {
-      "id": 9,
-      "name": "Audi Q10",
-      "brand": "audi",
-      "country": "germany",
-      "rent": "823",
-      "users": "5",
       "transmission": "manual"
     }
   ],

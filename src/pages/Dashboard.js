@@ -1,5 +1,4 @@
 import React from 'react';
-
 import FeaturedCars from '../components/CarsSection/FeaturedCars';
 import Charts from '../components/Charts';
 import Trophies from '../components/TrophiesSection/Trophies';

@@ -1,5 +1,5 @@
 
-# Cars bookings design
+# Cars booking design
 
 Design for car booking website with a variety of car brands and colors with rent prices
 
@@ -15,7 +15,7 @@ https://booking-car.netlify.app
 - Dashboard screen contents of cars statistics
 - Multilingual English and Arabic directions
 - Search and filter into different cars list
-- Mock an API for the car list
+- API Mocking for the car list
 
 ## Run Locally
 
