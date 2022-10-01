@@ -7,7 +7,7 @@ import Car1 from '../../assets/cards/car1.png';
 import Car2 from '../../assets/cards/car2.png';
 import Car3 from '../../assets/cards/car3.png';
 
-const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
+const FeaturedCars = ({ percentage, name, number, price, retweets, color }) => {
   return (
     <div className={`rounded-2xl p-6 ${color} flex flex-col`}>
       {/* car recommend */}
@@ -37,4 +37,4 @@ const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
   );
 };
 
-export default HomeCars;
+export default FeaturedCars;

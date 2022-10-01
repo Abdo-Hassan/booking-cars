@@ -5,12 +5,12 @@ import Favorite from '../../assets/icons/favorite.svg';
 import FavoriteDone from '../../assets/icons/favorite-done.svg';
 import CarIcon2 from '../../assets/icons/carIcon2.svg';
 
-const CarCard = ({ title, country, users, transmission, rent }) => {
+const CarCard = ({ name, country, users, transmission, rent }) => {
   const [favorite, setFavorite] = useState(false);
   return (
     <div className='bg-white rounded-2xl px-6 py-8'>
       <div className='flex items-center justify-between'>
-        <h5 className='text-lg font-bold'>{title}</h5>
+        <h5 className='text-lg font-bold'>{name}</h5>
         {favorite ? (
           <img
             className='cursor-pointer'

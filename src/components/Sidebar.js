@@ -14,7 +14,7 @@ const Sidebar = ({}) => {
     <div className='hidden sm:block w-72 h-screen sticky top-0 bg-white px-4 mr-0.5'>
       <div className='flex items-center px-3'>
         <img src={Logo} alt='logo' className='ltr:mr-3 rtl:ml-3' />
-        <h6 className='font-bold text-2xl py-4'>Motiv.</h6>
+        <h6 className='font-bold text-2xl py-4'>Motiv</h6>
       </div>
 
       <ul className='relative flex flex-col h-5/6'>

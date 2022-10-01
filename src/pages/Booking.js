@@ -1,42 +1,82 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CarCard from '../components/CarsSection/CarCard';
 import DropDown from '../components/DropDown';
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
+import Loading from '../components/Loading';
+import Search from '../components/Search';
 
 const Booking = () => {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSearch = (val) => {
+    setSearchValue(val);
+  };
+
+  const fetchCars = async () => {
+    try {
+      return await (
+        await axios.get('http://localhost:8000/cars')
+      ).data;
+    } catch (error) {
+      console.log('~ error', error);
+    }
+  };
+
+  const { data: cars, isLoading } = useQuery(['fetchCars'], fetchCars, {
+    refetchOnWindowFocus: false,
+  });
+
+  let filteredCars =
+    cars &&
+    cars?.length > 0 &&
+    cars?.filter((car) => {
+      return (
+        car?.name?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        car?.brand?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        car?.country?.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    });
+
   return (
     <div className='p-8'>
       <h6 className='text-3xl mb-10'>Booking</h6>
 
       {/* filter card */}
-      <DropDown title='New' />
-      <DropDown title='Toyota' />
-
-      {/* list of cars */}
-      <div className='container py-6'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <CarCard
-            title='Porshe 718 Cayman S'
-            country='Coupe'
-            users={4}
-            transmission='Manual'
-            rent='400'
-          />
-          <CarCard
-            title='Porshe 718 Cayman S'
-            country='Coupe'
-            users={4}
-            transmission='Manual'
-            rent='400'
-          />
-          <CarCard
-            title='Porshe 718 Cayman S'
-            country='Coupe'
-            users={4}
-            transmission='Manual'
-            rent='400'
+      <div className='flex items-center'>
+        <div>
+          <DropDown title='New' />
+          <DropDown title='Toyota' />
+        </div>
+        <div className='relative'>
+          <Search
+            type='cars'
+            placeholder='Search for a car'
+            handleSearch={handleSearch}
+            searchValue={searchValue}
           />
         </div>
       </div>
+
+      {/* list of cars */}
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className='container py-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {filteredCars?.map((car, i) => (
+              <CarCard
+                key={i}
+                name={car?.name}
+                country={car?.country}
+                users={car?.users}
+                rent={car?.rent}
+                transmission={car?.transmission}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

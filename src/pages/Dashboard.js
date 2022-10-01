@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HomeCars from '../components/CarsSection/HomeCars';
+import FeaturedCars from '../components/CarsSection/FeaturedCars';
 import Charts from '../components/Charts';
 import Trophies from '../components/TrophiesSection/Trophies';
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
       <div className='container py-6 px-6'>
         {/* cars section */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <HomeCars
+          <FeaturedCars
             percentage='64'
             name='Mini Cooper'
             number={1}
@@ -24,7 +24,7 @@ const Dashboard = () => {
             retweets='132K'
             color='bg-lighten-five'
           />
-          <HomeCars
+          <FeaturedCars
             percentage='74'
             name='Porsche 911 Carrera'
             number={2}
@@ -32,7 +32,7 @@ const Dashboard = () => {
             retweets='130K'
             color='bg-lighten-six'
           />
-          <HomeCars
+          <FeaturedCars
             percentage='74'
             name='Porsche 911 Carrera'
             number={3}

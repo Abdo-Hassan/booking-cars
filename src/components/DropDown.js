@@ -7,7 +7,7 @@ const DropDown = ({ title }) => {
       <button
         id='dropdownDefault'
         data-dropdown-toggle='dropdown'
-        className='text-slate-500 bg-white hover:bg-slate-50 focus:outline-none font-medium rounded-2xl text-sm mr-3 px-7 py-1.5 text-center inline-flex items-center'
+        className='text-slate-500 bg-white hover:bg-slate-50 focus:outline-none font-medium rounded-2xl text-sm ltr:mr-3 rtl:ml-3 px-7 py-1.5 text-center inline-flex items-center'
         type='button'>
         <span className='ltr:mr-3 rtl:ml-3 text-lg'>{title}</span>
         <img src={ChevronDown} alt='ChevronDown' />
