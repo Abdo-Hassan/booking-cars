@@ -1,7 +1,8 @@
-import Dashboard from './components/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Search from './components/Search';
 import Sidebar from './components/Sidebar';
 import { Routes, Route } from 'react-router-dom';
+import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Search />
         <Routes>
           <Route path='/' element={<Dashboard />} />
-          {/* <Route path="cars" element={<Cars />} /> */}
+          <Route path='cars' element={<Booking />} />
         </Routes>
       </div>
     </div>

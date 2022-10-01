@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '../assets/logo.png';
-import CarIcon from '../assets/icons/sidebar-car.png';
-import DashboardIcon from '../assets/icons/sidebar-dashboard.png';
-import SettingsIcon from '../assets/icons/settings.png';
-import Logout from '../assets/icons/logout.png';
+import Logo from '../assets/logo.svg';
+import CarIcon from '../assets/icons/sidebar-car.svg';
+import DashboardIcon from '../assets/icons/sidebar-dashboard.svg';
+import SettingsIcon from '../assets/icons/settings.svg';
+import Logout from '../assets/icons/logout.svg';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import CarIcon1 from '../../assets/icons/carIcon1.png';
-import CarIcon2 from '../../assets/icons/carIcon2.png';
-import CarIcon3 from '../../assets/icons/carIcon3.png';
-import CarIcon4 from '../../assets/icons/carIcon4.png';
+import CarIcon1 from '../../assets/icons/carIcon1.svg';
+import CarIcon2 from '../../assets/icons/carIcon2.svg';
+import CarIcon3 from '../../assets/icons/carIcon3.svg';
+import CarIcon4 from '../../assets/icons/carIcon4.svg';
 import Car1 from '../../assets/cards/car1.png';
 import Car2 from '../../assets/cards/car2.png';
 import Car3 from '../../assets/cards/car3.png';
@@ -24,10 +24,10 @@ const HomeCars = ({ percentage, name, number, price, retweets, color }) => {
       </div>
       <div className='flex items-center '>
         <img src={CarIcon2} alt='CarIcon2' className='mr-3' />
-        <span className='text-sm'>{retweets}</span>
+        <span className='text-sm text-slate-500 mr-3'>{retweets}</span>
         <img src={CarIcon3} alt='CarIcon3' className='mr-3' />
         <img src={CarIcon4} alt='CarIcon4' className='mr-3' />
-        <span className='text-sm ml-auto'>${price}</span>
+        <span className='text-sm ml-auto text-slate-500'>${price}</span>
       </div>
     </div>
   );

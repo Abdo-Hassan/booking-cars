@@ -1,10 +1,10 @@
 import React from 'react';
-import Person from '../assets/person.png';
-import Notification from '../assets/icons//notification.png';
+import Person from '../assets/person.svg';
+import Notification from '../assets/icons/notification.svg';
 
 const Search = () => {
   return (
-    <div className='bg-white py-4 px-6'>
+    <div className='bg-white sticky top-0 py-4 px-6'>
       <div className='relative flex justify-between'>
         <div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
           <svg

@@ -1,12 +1,12 @@
 import React from 'react';
-import Chart1 from '../assets/cards/chart1.png';
-import Chart2 from '../assets/cards/chart2.png';
-import Chart3 from '../assets/cards/chart3.png';
-import Chart4 from '../assets/cards/chart4.png';
-import iconChart1 from '../assets//icons/iconChart1.png';
-import iconChart2 from '../assets//icons/iconChart2.png';
-import iconChart3 from '../assets//icons/iconChart3.png';
-import iconChart4 from '../assets//icons/iconChart4.png';
+import Chart1 from '../assets/cards/chart1.svg';
+import Chart2 from '../assets/cards/chart2.svg';
+import Chart3 from '../assets/cards/chart3.svg';
+import Chart4 from '../assets/cards/chart4.svg';
+import iconChart1 from '../assets//icons/iconChart1.svg';
+import iconChart2 from '../assets//icons/iconChart2.svg';
+import iconChart3 from '../assets//icons/iconChart3.svg';
+import iconChart4 from '../assets//icons/iconChart4.svg';
 
 const Charts = () => {
   return (
@@ -14,7 +14,7 @@ const Charts = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         <div className='flex justify-center flex-col bg-primary-main rounded-2xl py-5 mx-5'>
           <img
-            className='bg-lighten-one w-8 self-center mt-4 rounded-full'
+            className='bg-lighten-one self-center mt-4 rounded-full'
             src={iconChart1}
             alt='iconChart1'
           />
@@ -26,7 +26,7 @@ const Charts = () => {
 
         <div className='flex justify-center flex-col bg-white rounded-2xl py-5 mx-5'>
           <img
-            className='bg-lighten-two w-8 self-center mt-4 rounded-full'
+            className='bg-lighten-two self-center mt-4 rounded-full'
             src={iconChart2}
             alt='iconChart2'
           />
@@ -36,7 +36,7 @@ const Charts = () => {
 
         <div className='flex justify-center flex-col bg-white rounded-2xl py-5 mx-5'>
           <img
-            className='bg-lighten-three w-8 self-center mt-4 rounded-full'
+            className='bg-lighten-three self-center mt-4 rounded-full'
             src={iconChart3}
             alt='iconChart3'
           />
@@ -46,7 +46,7 @@ const Charts = () => {
 
         <div className='flex justify-center flex-col bg-white rounded-2xl py-5 mx-5'>
           <img
-            className='bg-lighten-four w-8 self-center mt-4 rounded-full'
+            className='bg-lighten-four self-center mt-4 rounded-full'
             src={iconChart4}
             alt='iconChart4'
           />
