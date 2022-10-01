@@ -7,7 +7,7 @@ import Logout from '../assets/icons/logout.svg';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-const Sidebar = ({}) => {
+const Sidebar = () => {
   const { pathname } = useLocation();
   const routePath = pathname?.split('/')[1];
   return (
