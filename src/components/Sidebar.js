@@ -65,7 +65,7 @@ const Sidebar = () => {
             </li>
           </div>
 
-          <div className='mt-auto relative top-7'>
+          <div className='mt-auto relative top-0 sm:top-7'>
             <li className='relative'>
               <a
                 className='flex items-center text-sm py-4 px-3 h-10 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'

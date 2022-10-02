@@ -3,6 +3,8 @@ import CarCard from '../components/CarsSection/CarCard';
 import DropDown from '../components/DropDown';
 import axios from 'axios';
 import DashboardIcon from '../assets/icons/sidebar-dashboard.svg';
+import ClearFilterIcon from '../assets/icons/clearFilter.png';
+import ClearFilterActiveIcon from '../assets/icons/clearFilterActive.png';
 import FilterShowIcon from '../assets/icons/filterShow.svg';
 import FilterHiddenIcon from '../assets/icons/filterHidden.svg';
 import { useQuery } from '@tanstack/react-query';
@@ -10,10 +12,11 @@ import Loading from '../components/Loading';
 import Search from '../components/Search';
 
 let brands = ['mercedes', 'audi', 'toyota', 'renault'];
-let transmission = ['auto', 'manual'];
 
 const Booking = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [carFilter, setCarFilter] = useState('');
+  const [filterActive, setFilterActive] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
 
   const handleSearch = (val) => {
@@ -38,17 +41,27 @@ const Booking = () => {
     }
   );
 
+  const handleFilters = (val) => {
+    setCarFilter(val);
+    setFilterActive(true);
+  };
+
   let filteredCars =
     cars &&
     cars?.length > 0 &&
     cars?.filter((car) => {
       return (
-        car?.name?.toLowerCase().includes(searchValue.toLowerCase()) ||
-        car?.brand?.toLowerCase().includes(searchValue.toLowerCase()) ||
-        car?.type?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        car?.name?.toLowerCase().includes(searchValue.toLowerCase()) &&
+        car?.brand
+          ?.toLowerCase()
+          .includes(
+            carFilter.toLowerCase() || searchValue.toLocaleLowerCase()
+          ) &&
+        car?.type?.toLowerCase().includes(searchValue.toLowerCase()) &&
         car?.rent?.toLowerCase().includes(searchValue.toLowerCase())
       );
     });
+  console.log('~ filteredCars', filteredCars);
 
   return (
     <div className='p-8'>
@@ -58,23 +71,21 @@ const Booking = () => {
         <Loading />
       ) : (
         <>
-          {/* filter card */}
-          <div className='block sm:flex items-center'>
-            {/* filters */}
+          {/* filters */}
+          <div className='block sm:flex items-end'>
             {showFilters && (
-              <div className='relative mb-4 sm:mb-0'>
+              <div className='relative'>
                 <DropDown
-                  type='carsTransmission'
-                  defaultOption='Manual'
-                  data={transmission}
+                  handleFilters={handleFilters}
+                  defaultOption={carFilter !== '' ? carFilter : 'audi'}
+                  brands={brands}
                 />
-                <DropDown type='carsBrand' defaultOption='Audi' data={brands} />
               </div>
             )}
 
             {/* search */}
             {showFilters && (
-              <div className='relative mb-4 sm:mb-0'>
+              <div className='relative mb-4 sm:mb-0 right-9 sm:right-0'>
                 <Search
                   type='cars'
                   placeholder='Search for a car'
@@ -90,6 +101,25 @@ const Booking = () => {
                 src={DashboardIcon}
                 alt='DashboardIcon'
               />
+
+              {filterActive ? (
+                <img
+                  onClick={() => {
+                    setFilterActive(false);
+                    setCarFilter('');
+                  }}
+                  className={`w-12 bg-primary-main cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3`}
+                  src={ClearFilterActiveIcon}
+                  alt='ClearFilterActiveIcon'
+                />
+              ) : (
+                <img
+                  className='w-12 bg-white cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3'
+                  src={ClearFilterIcon}
+                  alt='ClearFilterIcon'
+                />
+              )}
+
               {showFilters ? (
                 <img
                   onClick={() => setShowFilters(!showFilters)}
@@ -102,7 +132,7 @@ const Booking = () => {
                   onClick={() => setShowFilters(!showFilters)}
                   className='cursor-pointer bg-white p-2.5 rounded-full'
                   src={FilterHiddenIcon}
-                  alt='FilterIcon'
+                  alt='FilterHiddenIcon'
                 />
               )}
             </div>
