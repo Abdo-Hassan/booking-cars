@@ -15,12 +15,20 @@ let brands = ['mercedes', 'audi', 'toyota', 'renault'];
 
 const Booking = () => {
   const [searchValue, setSearchValue] = useState('');
-  const [carFilter, setCarFilter] = useState('');
+  const [carFilterValue, setCarFilterValue] = useState('');
   const [filterActive, setFilterActive] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
 
   const handleSearch = (val) => {
     setSearchValue(val);
+    setCarFilterValue('');
+    setFilterActive(false);
+  };
+
+  const handleFilters = (val) => {
+    setCarFilterValue(val);
+    setSearchValue(val);
+    setFilterActive(true);
   };
 
   const fetchCars = async () => {
@@ -41,23 +49,18 @@ const Booking = () => {
     }
   );
 
-  const handleFilters = (val) => {
-    setCarFilter(val);
-    setFilterActive(true);
-  };
-
   let filteredCars =
     cars &&
     cars?.length > 0 &&
     cars?.filter((car) => {
       return (
-        car?.name?.toLowerCase().includes(searchValue.toLowerCase()) &&
+        car?.name?.toLowerCase().includes(searchValue.toLowerCase()) ||
         car?.brand
           ?.toLowerCase()
           .includes(
-            carFilter.toLowerCase() || searchValue.toLocaleLowerCase()
-          ) &&
-        car?.type?.toLowerCase().includes(searchValue.toLowerCase()) &&
+            carFilterValue.toLowerCase() || searchValue.toLocaleLowerCase()
+          ) ||
+        car?.type?.toLowerCase().includes(searchValue.toLowerCase()) ||
         car?.rent?.toLowerCase().includes(searchValue.toLowerCase())
       );
     });
@@ -77,7 +80,9 @@ const Booking = () => {
               <div className='relative'>
                 <DropDown
                   handleFilters={handleFilters}
-                  defaultOption={carFilter !== '' ? carFilter : 'audi'}
+                  defaultOption={
+                    carFilterValue !== '' ? carFilterValue : 'audi'
+                  }
                   brands={brands}
                 />
               </div>
@@ -106,7 +111,8 @@ const Booking = () => {
                 <img
                   onClick={() => {
                     setFilterActive(false);
-                    setCarFilter('');
+                    setCarFilterValue('');
+                    setSearchValue('');
                   }}
                   className={`w-12 bg-primary-main cursor-pointer p-3 rounded-full ltr:mr-3 rtl:ml-3`}
                   src={ClearFilterActiveIcon}
