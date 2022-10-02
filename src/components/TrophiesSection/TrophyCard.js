@@ -1,6 +1,6 @@
 import React from 'react';
-import Badge from '../../assets/cards/badge.png';
-import Points from '../../assets/cards/points.png';
+import Badge from '../../assets/cards/badge.svg';
+import Points from '../../assets/cards/points.svg';
 
 const TrophyCard = ({ title, text, points, color, colorText }) => {
   return (
@@ -14,7 +14,11 @@ const TrophyCard = ({ title, text, points, color, colorText }) => {
           {title}!
         </h5>
 
-        <img src={title === 'Badges' ? Badge : Points} alt='trophyPic' />
+        <img
+          className='w-36'
+          src={title === 'Badges' ? Badge : Points}
+          alt='trophyPic'
+        />
       </div>
 
       <h6 className={`${colorText} font-normal`}>{text}</h6>

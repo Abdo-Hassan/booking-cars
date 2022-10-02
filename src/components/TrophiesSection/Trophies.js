@@ -1,5 +1,5 @@
 import React from 'react';
-import Desk from '../../assets/cards/desk.png';
+import Desk from '../../assets/cards/desk.svg';
 import TrophyCard from './TrophyCard';
 
 const Trophies = () => {
@@ -19,7 +19,7 @@ const Trophies = () => {
         </div>
 
         <div>
-          <img src={Desk} alt='desk' />
+          <img className='w-64' src={Desk} alt='desk' />
         </div>
       </div>
       <div className='col-span-4 sm:col-span-1'>

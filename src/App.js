@@ -17,6 +17,7 @@ function App() {
       className='bg-primary-grey flex'
       dir={language === 'English' ? 'ltr' : 'rtl'}>
       <Sidebar />
+
       <div className='w-full'>
         <TopBar language={language} toggleLanguage={toggleLanguage} />
         <Routes>

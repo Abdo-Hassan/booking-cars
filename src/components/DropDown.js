@@ -4,7 +4,6 @@ import ChevronDown from '../assets/icons/chevronDown.svg';
 const DropDown = ({ type, defaultOption, data, toggleLanguage }) => {
   const [openCarBrands, setOpenCarBrands] = useState(false);
   const [openCarTransmission, setOpenCarTransmission] = useState(false);
-  const [openCarType, setOpenCarType] = useState(false);
   const [openLanguage, setOpenLanguage] = useState(false);
 
   return (
@@ -14,8 +13,6 @@ const DropDown = ({ type, defaultOption, data, toggleLanguage }) => {
         onClick={() =>
           type === 'carsBrand'
             ? () => setOpenCarBrands(!openCarBrands)
-            : type === 'carsType'
-            ? () => setOpenCarType(!openCarType)
             : type === 'carsTransmission'
             ? () => setOpenCarTransmission(!openCarTransmission)
             : () => setOpenLanguage(!openLanguage)

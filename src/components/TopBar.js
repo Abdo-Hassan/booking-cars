@@ -6,12 +6,11 @@ import Search from './Search';
 
 const TopBar = ({ language, toggleLanguage }) => {
   return (
-    // <div className='bg-white sticky top-0 py-4 px-6'>
-    <div className='bg-white  py-4 px-6'>
+    <div className='bg-white py-4 pl-6 sm:pl-0 px-6'>
       <div className='relative block sm:flex justify-between'>
         <Search type='TopBar' placeholder='Search or type' />
 
-        <div className='flex items-center'>
+        <div className='flex items-center justify-center sm:justify-end'>
           {/* switch language */}
           <LanguageSelect language={language} toggleLanguage={toggleLanguage} />
 

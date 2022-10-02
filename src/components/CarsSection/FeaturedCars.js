@@ -3,9 +3,9 @@ import CarIcon1 from '../../assets/icons/carIcon1.svg';
 import CarIcon2 from '../../assets/icons/carIcon2.svg';
 import CarIcon3 from '../../assets/icons/carIcon3.svg';
 import CarIcon4 from '../../assets/icons/carIcon4.svg';
-import Car1 from '../../assets/cards/cars/car1.png';
-import Car2 from '../../assets/cards/cars/car2.png';
-import Car3 from '../../assets/cards/cars/car3.png';
+import Car1 from '../../assets/cards/cars/car1.svg';
+import Car2 from '../../assets/cards/cars/car2.svg';
+import Car3 from '../../assets/cards/cars/car3.svg';
 
 const FeaturedCars = ({ percentage, name, number, price, retweets, color }) => {
   return (
@@ -16,7 +16,11 @@ const FeaturedCars = ({ percentage, name, number, price, retweets, color }) => {
         <span className='text-lg font-bold'>{percentage}% Recommend</span>
       </div>
 
-      <img src={number === 1 ? Car1 : number === 2 ? Car2 : Car3} alt='Car1' />
+      <img
+        className='h-36'
+        src={number === 1 ? Car1 : number === 2 ? Car2 : Car3}
+        alt='Car1'
+      />
 
       {/* car details */}
       <div className='mb-3 mt-3'>

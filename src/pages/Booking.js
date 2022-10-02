@@ -11,7 +11,6 @@ import Search from '../components/Search';
 
 let brands = ['mercedes', 'audi', 'toyota', 'renault'];
 let transmission = ['auto', 'manual'];
-let types = ['regular', 'coupe'];
 
 const Booking = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -24,9 +23,7 @@ const Booking = () => {
   const fetchCars = async () => {
     try {
       return await (
-        await axios.get(
-          'https://run.mocky.io/v3/e91bf721-2d44-444a-8aec-1f05b676e2c0'
-        )
+        await axios.get('https://testapi.io/api/abdohassan/cars')
       ).data;
     } catch (error) {
       console.log('~ error', error);
@@ -66,7 +63,6 @@ const Booking = () => {
             {/* filters */}
             {showFilters && (
               <div className='relative mb-4 sm:mb-0'>
-                <DropDown type='carsType' defaultOption='Coupe' data={types} />
                 <DropDown
                   type='carsTransmission'
                   defaultOption='Manual'
