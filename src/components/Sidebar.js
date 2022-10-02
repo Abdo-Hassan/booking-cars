@@ -25,7 +25,7 @@ const Sidebar = () => {
         className={`w-[240px]
          ltr:-left-[240px] ltr:sm:w-[280px] lrt:sm:-left-[280px]
          rtl:-right-[240px] rtl:sm:w-[280px] rtl:sm:-right-[280px]
-         ltr:peer-focus:left-0 rtl:peer-focus:right-0 lrt:mr-0 rtl:mr-6 ease-out delay-150 duration-300 shadow-2xl sm:shadow-none h-screen fixed sm:sticky top-0 z-50 sm:z-0 bg-white px-4 mr-0.5`}>
+         ltr:peer-focus:left-0 rtl:peer-focus:right-0 lrt:sm:mr-6 rtl:sm:mr-0 ease-out delay-150 duration-300 shadow-2xl sm:shadow-none h-screen fixed sm:sticky top-0 z-50 sm:z-0 bg-white px-4 mr-0.5`}>
         <div className='flex items-center px-3'>
           <img src={Logo} alt='logo' className='ltr:mr-3 rtl:ml-3' />
           <h6 className='font-bold text-2xl py-4'>Motiv</h6>

@@ -10,7 +10,7 @@ const DropDown = ({ defaultOption, brands, handleFilters }) => {
         id='dropdownDefault'
         onClick={() => setOpen(!open)}
         data-dropdown-toggle='dropdown'
-        className='mb-4 sm:mb-0 relative text-slate-500 bg-white hover:bg-slate-50 focus:outline-none font-medium rounded-3xl text-sm ltr:mr-3 rtl:ml-3 px-7 py-1.5 text-center inline-flex items-center'
+        className='mb-4 sm:mb-0 relative text-slate-500 bg-white hover:bg-slate-50 focus:outline-none font-medium rounded-3xl text-sm ltr:mr-3 rtl:ml-6 px-7 py-1.5 text-center inline-flex items-center'
         type='button'>
         <span className='ltr:mr-6 rtl:ml-4 text-lg'>{defaultOption}</span>
         <img src={ChevronDown} alt='ChevronDown' />
